@@ -1,0 +1,27 @@
+@mixin translate($top, $left) {
+    -webkit-transform: translate($top, $left);
+        -ms-transform: translate($top, $left);
+         -o-transform: translate($top, $left);
+            transform: translate($top, $left);
+}
+
+@mixin shadow-in($size, $color) {
+
+  -webkit-box-shadow: inset 0px 0px $size 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow:    inset 0px 0px $size 0px rgba(50, 50, 50, 0.5);
+  box-shadow:         inset 0px 0px $size 0px rgba(50, 50, 50, 0.5);
+
+}
+
+@each $font-face in $font-stack  {
+    @font-face {
+          font-family: $font-face; font-style: normal; font-weight: normal;
+          src: url('../assets/fonts/#{$font-face}.ttf');
+    }
+}
+
+@mixin font($font, $style: normal, $weight: normal) {
+    font-family: $font, verdana;
+    font-style:  $style;
+    font-weight: $weight;
+}
